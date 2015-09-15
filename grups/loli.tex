@@ -1,0 +1,157 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\title{Estructures Algebraiques\\Grups}
+\author{Sistach Reinoso, Arnau}
+
+% nomes crec que serveix per la ela geminada (on sense el corrector dubto mai fer-ho anar 183 ·)
+\usepackage[catalan]{babel}
+
+% perque quedi mes clar
+\usepackage{color}
+
+
+
+% faig anar equation*
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+
+
+
+% like kindle
+
+\usepackage{microtype}     % microtypography, reduces hyphenation
+
+\usepackage[papersize={3.6in,4.8in},hmargin=0.1in,vmargin={0.1in,0.1in}]{geometry}  % page geometry
+
+\usepackage{fancyhdr}   % headers and footers
+\pagestyle{fancy}
+\fancyhead{}            % clear page header
+\fancyfoot{}            % clear page footer
+
+\setlength{\abovecaptionskip}{2pt} % space above captions 
+\setlength{\belowcaptionskip}{0pt} % space below captions
+\setlength{\textfloatsep}{2pt}     % space between last top float or first bottom float and the text
+\setlength{\floatsep}{2pt}         % space left between floats
+\setlength{\intextsep}{2pt}        % space left on top and bottom of an in-text float
+
+
+% https://atlas.mat.ub.edu/personals/crespo/ApuntsEstructuresAlgebraiques.pdf
+\begin{document}
+\maketitle
+Teoria de grups\\
+grups finits hi ha teoremes forts\\
+grups abelians\\
+propietats de factorialitat\\
+forçar-se pel primer parcial 45\% nota final = 2 parcial\\
+dimarts mirar els nous exercisis\\
+de la meta, funtes xambo Introducción al algebra\\
+\newpage
+
+\section{Definicions}
+\subsection{Grup}
+\begin{itemize}
+\item Conjunt $G \neq \emptyset$
+\item Dotat d'una operació interna binària
+	\begin{enumerate}
+	\item $\forall x, y, z \in G : (xy)z = x(yz) $ - assosiativa -
+	\item $\exists e \in G: ex = xe = x$ - $e$ element neutre -
+	\item $\forall x \in G, \exists x' \in G: xx' = x'x = e$ - simètric -
+	\end{enumerate}
+\item grup $G$ commutatiu i/o abelià
+	\begin{itemize}
+	\item $\forall x, y \in G\quad xy = yx$
+	\end{itemize}
+\end{itemize}
+\subsection{Subgrup}
+\begin{itemize}
+\item $H \subset G$ grup
+\item $H \neq \emptyset$
+	\begin{enumerate}
+	\item $\forall x, y \in H \Rightarrow xy \in H$
+	\item $H$ és grup amb l'operació de $G$
+	\end{enumerate}
+\end{itemize}
+
+\newpage\section{Demostracions}
+\subsection{Únic element d'un grup}
+\begin{itemize}
+\item element neutre $e = ee' = e'$
+\item simètric $x' = x'e = x'(xx'') = (x'x)x'' = x''$
+\end{itemize}
+\subsection{Propietats simples}
+\begin{itemize}
+\item Llei de simplificació - pels grups
+	\begin{itemize}
+	\item $\forall a, x, y \in G$ grup
+	\item $ax = ay \Rightarrow x = y$
+	\item $xa = ya \Rightarrow x = y$
+	\end{itemize}
+\item Invers del producte
+	\subitem $(xy)' = y'x'$
+\end{itemize}
+\subsection{Propietats iguals -subgrups}
+\begin{enumerate}
+\item $H$ és subgrup de $G$
+\item $H$ compleix
+	\begin{enumerate}
+	\item $e \in H$
+	\item $\forall x \in H \Rightarrow x' \in H$
+	\item $\forall x, y \in H \Rightarrow xy \in H$
+	\end{enumerate}
+\item $\forall x, y \in H \Rightarrow xy' \in H$
+\end{enumerate}
+\subsubsection{demostració}
+\begin{itemize}
+\item $1. \to 2.$ és evident per definició de grup
+\item $2. \to 3.$
+	\begin{itemize}
+	\item per (b) $y \in H \Rightarrow y' \in H$
+	\item per (c) $x, y' \in H \Rightarrow xy' \in H$
+	\end{itemize}
+\item $3. \to 1.$
+	\begin{itemize}
+	\item $H \neq \emptyset$
+	\item $\exists x \in H \Rightarrow$ (c) $\Rightarrow xx' = e \in H$
+	\item $\forall y \in H \Rightarrow$ (c) $\Rightarrow e, y, ey' = y' \in H$
+	\item $x, y \in H, y' \in H \Rightarrow$ (c) $\Rightarrow xy = x(y')' \in H$
+	\end{itemize}
+\end{itemize}
+\subsection{Propietats intersecció}
+\begin{itemize}
+\item $H_1, H_2$ subgrups de $G$ grup
+	\subitem $H_1 \cap H_2$ és subgrup de $G$
+\end{itemize}
+\subsection{$H$ subgrup $\Z$, $H \equiv m\Z$ algún $m$}
+\begin{itemize}
+\item $H = \{0\} \Rightarrow H = 0 \Z$
+\item $H \neq \{0\}$
+	\begin{itemize}
+	\item $n \in H \Rightarrow -n \in H$
+		\subitem Conté elements estrictament positius
+		\subitem $m > 0$ més petit contingut $H \Rightarrow m\Z \subset H$
+	\item Sigui $a \in H$
+		\begin{itemize}
+		\item $a = qm + r, 0 \le r < m$
+		\item $r = a - qm \in H \Rightarrow r = 0$ i $a \in m\Z$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\newpage\section{Exemples}
+\subsection{grups abelians}
+$(\Z, +), (\C, +), (\Q\setminus\{0\}, \times), (\Z/m\Z, +), ((\Z/m\Z)^*, \times)$
+\subsection{grup no abelià}
+$\forall K$ cos, $GL(n, K)$ i $n \ge 2$
+\subsection{subgurp}
+$m\Z$ és subgrup de $(\Z, +) \forall m \in \Z$
+\end{document}
+
+final de la pagina 7
+inici de grups de permutacions

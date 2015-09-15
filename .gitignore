@@ -1,0 +1,8 @@
+# us del vim
+*.swp
+
+# us del LaTeX
+*.aux
+*.dvi
+*.log
+*.pdf

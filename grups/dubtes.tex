@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\begin{document}
+
+% Primer dubte
+\section{Propietats iguals -subgrups}
+\begin{enumerate}
+\item $H$ és subgrup de $G$
+\item $H$ compleix
+	\begin{enumerate}
+	\item $e \in H$
+	\item $\forall x \in H \Rightarrow x' \in H$
+	\item $\forall x, y \in H \Rightarrow xy \in H$
+	\end{enumerate}
+\item $\forall x, y \in H \Rightarrow xy' \in H$
+\end{enumerate}
+\subsection{demostració}
+\begin{itemize}
+\item $1. \to 2.$ és evident per definició de grup
+\item $2. \to 3.$
+	\begin{itemize}
+	\item per (b) $y \in H \Rightarrow y' \in H$
+	\item per (c) $x, y' \in H \Rightarrow xy' \in H$
+	\end{itemize}
+\item $3. \to 1.$
+	\begin{itemize}
+	\item $H \neq \emptyset$
+	\item $\exists x \in H \Rightarrow$ (c) $\Rightarrow xx' = e \in H$
+	\item $\forall y \in H \Rightarrow$ (c) $\Rightarrow e, y, ey' = y' \in H$
+	\item $x, y \in H, y' \in H \Rightarrow$ (c) $\Rightarrow xy = x(y')' \in H$
+	\end{itemize}
+\end{itemize}
+
+
+% segon dubte
+\section{$H$ subgrup $\Z$, $H \equiv m\Z$ algún $m$}
+el dubte apareix amb la q, no se que és ni perquè te les propietats que te
+\begin{itemize}
+\item $H = \{0\} \Rightarrow H = 0 \Z$
+\item $H \neq \{0\}$
+	\begin{itemize}
+	\item $n \in H \Rightarrow -n \in H$
+		\subitem Conté elements estrictament positius
+		\subitem $m > 0$ més petit contingut $H \Rightarrow m\Z \subset H$
+	\item Sigui $a \in H$
+		\begin{itemize}
+		\item $a = qm + r, 0 \le r < m$
+		\item $r = a - qm \in H \Rightarrow r = 0$ i $a \in m\Z$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\end{document}
