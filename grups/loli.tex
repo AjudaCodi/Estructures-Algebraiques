@@ -4,7 +4,7 @@
 \author{Sistach Reinoso, Arnau}
 
 % nomes crec que serveix per la ela geminada (on sense el corrector dubto mai fer-ho anar 183 ·)
-\usepackage[catalan]{babel}
+%\usepackage[catalan]{babel}
 
 % perque quedi mes clar
 \usepackage{color}
@@ -51,62 +51,55 @@ grups abelians\\
 propietats de factorialitat\\
 forçar-se pel primer parcial 45\% nota final = 2 parcial\\
 dimarts mirar els nous exercisis\\
-de la meta, funtes xambo Introducción al algebra\\
+de la meta, fuertes xambo Introducción al algebra\\
 \newpage
 
-\section{Definicions}
-\subsection{Grup}
+\section{Bàsic}
+\subsection{Definicions}
 \begin{itemize}
-\item Conjunt $G \neq \emptyset$
-\item Dotat d'una operació interna binària
-	\begin{enumerate}
-	\item $\forall x, y, z \in G : (xy)z = x(yz) $ - assosiativa -
-	\item $\exists e \in G: ex = xe = x$ - $e$ element neutre -
-	\item $\forall x \in G, \exists x' \in G: xx' = x'x = e$ - simètric -
-	\end{enumerate}
-\item grup $G$ commutatiu i/o abelià
+\item Grup
 	\begin{itemize}
-	\item $\forall x, y \in G\quad xy = yx$
+	\item Conjunt $G \neq \emptyset$
+	\item Operació interna binària $\forall x, y, z \in G$
+		\begin{enumerate}
+		\item[assosiativa] $(xy)z = x(yz) $
+		\item[el. neutre] $\exists e \in G: ex = xe = x$
+		\item[simètric] $\forall x \in G, \exists x' \in G: xx' = x'x = e$
+		\end{enumerate}
+	\item grup $G$ commutatiu i/o abelià
+		\begin{itemize}
+		\item $\forall x, y \in G\quad xy = yx$
+		\end{itemize}
+	\end{itemize}
+\item Subgrup
+	\begin{itemize}
+	\item $\emptyset \neq H \subset G$ grup
+		\begin{enumerate}
+		\item $\forall x, y \in H \Rightarrow xy \in H$
+		\item $H$ és grup amb l'operació de $G$
+		\end{enumerate}
 	\end{itemize}
 \end{itemize}
-\subsection{Subgrup}
-\begin{itemize}
-\item $H \subset G$ grup
-\item $H \neq \emptyset$
-	\begin{enumerate}
-	\item $\forall x, y \in H \Rightarrow xy \in H$
-	\item $H$ és grup amb l'operació de $G$
-	\end{enumerate}
-\end{itemize}
-\subsection{Grups de permutacions}
-\begin{itemize}
-\item $X$ conjunt
-\item permutació és una bijecció de $X$ en $X$
-\item $S_X = \{$permutacions de $X\}$
-\item $n \in \N\setminus 0, S_n$ grup de permutacions de $\{1, 2,\dots , n\}$
-\item grup simètric de grau $n$
-\item $\begin{pmatrix}1 & 2 & \dots & n\\ \sigma(1) & \sigma(2) & \dots & \sigma(n)\end{pmatrix}$ cardinal $n!$
-\end{itemize}
-\subsection{r-cicle}
-\begin{itemize}
-\item $(k_1, k_2, \dots, k_r)$
-\end{itemize}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\newpage\section{Demostracions}
+\subsection{Demostracions}
 \subsection{Únic element d'un grup}
 \begin{itemize}
-\item element neutre $e = ee' = e'$
-\item simètric $x' = x'e = x'(xx'') = (x'x)x'' = x''$
+\item Únic element d'un grup
+	\begin{itemize}
+	\item element neutre $e = ee' = e'$
+	\item simètric $x' = x'e = x'(xx'') = (x'x)x'' = x''$
+	\end{itemize}
 \end{itemize}
+
 \subsection{Propietats simples}
 \begin{itemize}
 \item Llei de simplificació - pels grups
 	\begin{itemize}
 	\item $\forall a, x, y \in G$ grup
-	\item $ax = ay \Rightarrow x = y$
-	\item $xa = ya \Rightarrow x = y$
+		\begin{itemize}
+		\item $ax = ay \Rightarrow x = y$
+		\item $xa = ya \Rightarrow x = y$
+		\end{itemize}
 	\end{itemize}
 \item Invers del producte
 	\subitem $(xy)' = y'x'$
@@ -132,30 +125,38 @@ de la meta, funtes xambo Introducción al algebra\\
 	\end{itemize}
 \item $3. \to 1.$
 	\begin{itemize}
-	\item $H \neq \emptyset$
-	\item $\exists x \in H \Rightarrow$ (c) $\Rightarrow xx' = e \in H$
-	\item $\forall y \in H \Rightarrow$ (c) $\Rightarrow e, y, ey' = y' \in H$
-	\item $x, y \in H, y' \in H \Rightarrow$ (c) $\Rightarrow xy = x(y')' \in H$
+	\item $H \neq \emptyset$ ja que conté $x \in H$
+	\item $\exists x \in H \Rightarrow$ $x, x \in H$ $\Rightarrow xx' = e \in H$
+	\item $\forall y \in H \Rightarrow$ $e, y \in H$ $\Rightarrow ey' = y' \in H$
+	\item $x, y' \in H \Rightarrow$ $x(y')' = xy \in H$
 	\end{itemize}
 \end{itemize}
-\subsection{Propietats intersecció}
+\subsection{Propietats intersecció - like un ex.}
 \begin{itemize}
 \item $H_1, H_2$ subgrups de $G$ grup
 	\subitem $H_1 \cap H_2$ és subgrup de $G$
 \end{itemize}
-\subsection{$H$ subgrup $\Z$, $H \equiv m\Z$ algún $m$}
+\subsection{$H$ subgrup $(\Z, +)$, $H \equiv m\Z$ algún $m$}
 \begin{itemize}
 \item $H = \{0\} \Rightarrow H = 0 \Z$
 \item $H \neq \{0\}$
 	\begin{itemize}
-	\item $n \in H \Rightarrow -n \in H$
-		\subitem Conté elements estrictament positius
-		\subitem $m > 0$ més petit contingut $H \Rightarrow m\Z \subset H$
-	\item Sigui $a \in H$
+	\item $m > 0$ més petit: $m \in H$
+	\item $a \in H$
+	\item $a = qm + r$ amb $0 \le r < m$
 		\begin{itemize}
-		\item $a = qm + r, 0 \le r < m$
-		\item $r = a - qm \in H \Rightarrow r = 0$ i $a \in m\Z$
+		\item $r = a - qm \in H \Rightarrow r = 0$
+		\item $a = qm \in m\Z \Rightarrow H \subset m\Z$
 		\end{itemize}
+	\item $m\Z \subset H$ és obvi
+%	\item $n \in H \Rightarrow -n \in H$
+%		\subitem Conté elements estrictament positius
+%		\subitem $m > 0$ més petit contingut $H \Rightarrow m\Z \subset H$
+%	\item Sigui $a \in H$
+%		\begin{itemize}
+%		\item $a = qm + r, 0 \le r < m$
+%		\item $r = a - qm \in H \Rightarrow r = 0$ i $a \in m\Z$
+%		\end{itemize}
 	\end{itemize}
 \end{itemize}
 \subsection{Proposició permutacions}
@@ -172,7 +173,7 @@ de la meta, funtes xambo Introducción al algebra\\
 $(\Z, +), (\C, +), (\Q\setminus\{0\}, \times), (\Z/m\Z, +), ((\Z/m\Z)^*, \times)$
 \subsection{grup no abelià}
 $\forall K$ cos, $GL(n, K)$ i $n \ge 2$
-\subsection{subgurp}
+\subsection{subgrup}
 $m\Z$ és subgrup de $(\Z, +) \forall m \in \Z$
 \subsection{permutacions}
 \begin{itemize}
@@ -186,7 +187,28 @@ $m\Z$ és subgrup de $(\Z, +) \forall m \in \Z$
 \item $\begin{pmatrix}1&2&3\\2&3&1\end{pmatrix} = (1, 2, 3) = (2, 3, 1) = (1, 2)(2, 3)$
 \item $\begin{pmatrix}1&2&3&4&5\\2&3&1&5&4\end{pmatrix} = (1, 2, 3)(4, 5) = (1, 2)(2, 3)(4, 5)$
 \end{itemize}
+
+
+%%%%%%%%%%%%%%% Permutacions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Permutatcions}
+\subsection{Grups de permutacions}
+\begin{itemize}
+\item $X$ conjunt
+\item permutació és una bijecció de $X$ en $X$
+\item $S_X = \{$permutacions de $X\}$
+\item $n \in \N\setminus 0, S_n$ grup de permutacions de $\{1, 2,\dots , n\}$
+\item grup simètric de grau $n$
+\item $\begin{pmatrix}1 & 2 & \dots & n\\ \sigma(1) & \sigma(2) & \dots & \sigma(n)\end{pmatrix}$ cardinal $n!$
+\end{itemize}
+\subsection{r-cicle}
+\begin{itemize}
+\item $(k_1, k_2, \dots, k_r)$
+\end{itemize}
 \end{document}
+
+dubtes
+	- (2.4) Propietats intersecció
+	- (2.5) H subgrup (Z, +), H = mZ algún m
 
 inici del 11
 morfismes de grup, encara no ho hem fet a clase
