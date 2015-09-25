@@ -9,6 +9,8 @@
 % perque quedi mes clar
 \usepackage{color}
 
+% fer el rcases
+\usepackage{mathtools}
 
 % faig anar equation*
 \usepackage{amsmath}
@@ -17,6 +19,7 @@
 % declarant funcions
 \DeclareMathOperator{\Ima}{Im}
 \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Id}{Id}
 
 \usepackage{amssymb}
 \newcommand{\N}{\mathbb{N}}
@@ -63,7 +66,7 @@ $0 \notin {\mathbb Z}^+$
 \newpage
 
 \section{Bàsic}
-\subsection{Definicions}
+\subsection*{Definicions}
 \begin{itemize}
 \item Grup
 	\begin{itemize}
@@ -89,7 +92,7 @@ $0 \notin {\mathbb Z}^+$
 	\end{itemize}
 \end{itemize}
 
-\subsection{Demostracions}
+\subsection*{Demostracions}
 \begin{itemize}
 \item Únic element d'un grup
 	\begin{itemize}
@@ -177,7 +180,7 @@ $0 \notin {\mathbb Z}^+$
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exemples}
+\subsection*{Exemples}
 \begin{itemize}
 \item Grups abelians
 	\subitem $(\Z, +), (\C, +), (\Q\setminus\{0\}, \times), (\Z/m\Z, +), ((\Z/m\Z)^*, \times)$
@@ -190,7 +193,7 @@ $0 \notin {\mathbb Z}^+$
 
 %%%%%%%%%%%%%%% Permutacions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \section{Permutatcions}
-\subsection{Definicions}
+\subsection*{Definicions}
 \begin{itemize}
 \item Grups de permutacions
 	\begin{itemize}
@@ -223,7 +226,7 @@ $0 \notin {\mathbb Z}^+$
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%% Demostracio %%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\subsection{Demostracio}
+\subsection*{Demostracio}
 like\\
 Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers? No vindrié a ser el simètric?
 \begin{itemize}
@@ -260,7 +263,7 @@ Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers
 	\end{itemize}
 \end{itemize}
 
-\subsection{Exemples}
+\subsection*{Exemples}
 \begin{itemize}
 \item $S_3 = \left\{\begin{pmatrix}1&2&3\\1&2&3\end{pmatrix}, \begin{pmatrix}1&2&3\\2&1&3\end{pmatrix} \dots \right\}$\\
 \item mante quiet 1 = $t_1$, el $t_2, t_3$, ho canvia tot 1 2 3 $s_1$ amb desordre 312 $s_2$
@@ -275,7 +278,7 @@ Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers
 
 %%%%%%%%%%%%%%%%%%%%%% Morfisme de grups %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \section{Morfismes de grups}
-\subsection{Definicions}
+\subsection*{Definicions}
 \begin{itemize}
 \item Morfisme de grups $f$
 	\begin{itemize}
@@ -302,7 +305,7 @@ Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers
 \item $\ker{(\pi)} = m\Z$ $\quad \pi:\Z \to \Z/m\Z$
 \end{itemize}
 
-\subsection{Demostració}
+\subsection*{Demostració}
 \begin{itemize}
 \item Proposició
 	\begin{itemize}
@@ -339,7 +342,7 @@ Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers
 	\end{itemize}
 \end{itemize}
 
-\subsection{Exemples}
+\subsection*{Exemples}
 \begin{itemize}
 \item Morfismes de grups
 	\begin{itemize}
@@ -357,7 +360,198 @@ Gran problema, com parlen i relacionen la composició d'aplicacions amb l'invers
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%% Ordre %%%%%%%%%%%%%%%%%%%%%%5
+\section{Ordre, relacions d'equivalència}
+\subsection*{Definició}
+\begin{itemize}
+\item Ordre $|G|$
+	\begin{itemize}
+	\item $G$ grup finit
+	\item És el nombre d'elements del conjunt
+	\end{itemize}
+\item Relació $D$ i $E$
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+		\begin{itemize}
+		\item $xDy \Leftrightarrow x'y \in H$
+		\item $yEx \Leftrightarrow yx' \in H$
+		\end{itemize}
+	\end{itemize}
+\item Classes d'equivalència per $D$
+	\begin{itemize}
+	\item $[x] = \{y \in G | xDy\}$
+	\item $xDy \Leftrightarrow x'y \in H \Leftrightarrow y = xh$ per a algún $h \in H$
+	\item $xH = \{xh | h \in H\}$ ``$D$''
+	\item $Hx = \{hx | h \in H\}$ ``$E$''
+	\item $G/D$ conjunt quocient de $G$ per la relació $D$
+	\item $G/E$ conjunt quocient de $G$ per la relació $E$
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Desmostracions}
+\begin{itemize}
+\item Les relacions $D$ i $E$ són d'equivalència
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+	\end{itemize}
+	\begin{enumerate}
+	\item $\forall x \in G\quad xDx \Rightarrow x'x = e \in H$ Reflexiva
+	\item $x, y \in G\quad xDy \Rightarrow x'y \in H \Rightarrow y'x = (x'y)' \in H \Rightarrow yDx$ Simètrica
+	\item $x, y, z \in G,
+		\begin{rcases}
+		xDy\\
+		yDz
+		\end{rcases}
+		\Rightarrow
+		\begin{rcases}
+		x'y \in H\\
+		y'z \in H
+		\end{rcases}
+		\Rightarrow
+		x'z = (x'y)(y'z) \in H \Rightarrow xDz
+		$ Transitiva
+	\end{enumerate}
+\item $G/E$ és bijectiu
+	\begin{itemize}
+	\item $
+		\begin{array}{cc}
+		H & \to xH \\
+		h & \mapsto xh
+		\end{array}
+		$
+	\item $
+		\begin{array}{cc}
+		H & \to Hx \\
+		h & \mapsto hx
+		\end{array}
+		$
+	\item $y \in xH \Leftrightarrow y = xh, h \in H \Leftrightarrow y' = hx' \Leftrightarrow y' \in Hx'$
+		\subitem $y \mapsto y'$
+	\item Tenim bijecció de $G/D$ i $G/E$
+	\end{itemize}
+\item Teorema de Lagrange
+	\begin{itemize}
+	\item $G$ grup finit
+	\item $H$ subgrup de $G$
+		\begin{itemize}
+		\item $|G| = |H|\dot [G:H]$
+		\end{itemize}
+	\end{itemize}
+\item Demostració like
+	\begin{itemize}
+	\item pagina 14 del pdf
+%	\item Les classes d'equivalència per $D$ formen una partició de $G$, és a dir $G$ és reunió disjunta de les classes d'equivalència i a cada classe d'equivalència i a cada classe d'equivalè
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Exemples}
+\begin{itemize}
+\item Ordre
+	\begin{itemize}
+	\item $|S_n| = n!$
+	\item $|\Z/m\Z| = m$
+	\end{itemize}
+\item Relació d'equivalència
+	\begin{itemize}
+	\item $G = S_3 = \{\Id, t_3, t_2, t_1, c_1, c_2\}$
+	\item $H = \{\Id, t_1\}$
+		\begin{itemize}
+		\item Classes per $D$
+			\begin{itemize}
+			\item $[\Id] = H$
+			\item $[t_2] = \{t_2, t_2t_1\} = \{t_2, c_2\}$
+			\item $[t_3] = \{t_3, t_3t_1\} = \{t_3, c_1\}$
+			\end{itemize}
+		\item Classes per $E$
+			\begin{itemize}
+			\item $[\Id] = H$
+			\item $[t_2] = \{t_2, t_1t_2\} = \{t_2, c_1\}$
+			\item $[t_3] = \{t_3, t_1t_3\} = \{t_3, c_2\}$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\item Índex de $G$ en $H$ el cardinal de $G/D$
+	\begin{itemize}
+	\item $[\Z:m\Z] = m$
+	\item $[S_3: \{\Id, t_1\}] = 3$
+	\end{itemize}
+\end{itemize}
+
+\section{Subgrups normals. Grup quocient}
+\subsection*{Definicions}
+\begin{itemize}
+\item $T$ compatible amb l'operació de $G$
+	\begin{itemize}
+	\item $G$ grup
+	\item $T$ relació d'equivalència de $G$
+		\begin{itemize}
+		\item $x, y, x', y' \in G$
+		\item 	$
+			\begin{rcases}
+			xTx'\\yTy'
+			\end{rcases}
+			\Rightarrow xyTx'y'
+			$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Demostracions}
+\begin{itemize}
+\item Proposició
+	\begin{itemize}
+	\item[Si] $T$ és relació d'equivalència compatible amb l'operació de $G$
+	\item[$\Rightarrow$] $G/T$ és grup amb l'operació definida per
+		\subitem $[x][y] = [xy]$
+	\end{itemize}
+\item Demostració
+	\begin{itemize}
+	\item L'operació esta ben definida
+		\begin{itemize}
+		\item Associativa
+		\item Element neutre $[e]$
+		\item Simètric $[x']$
+		\end{itemize}
+	\end{itemize}
+\item Proposició
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+	\item $D, E$ relacions definides a partir $H$
+	\item $\forall x \in G$
+		\begin{enumerate}
+		\item $xH = Hx$
+		\item $xHx' = H$
+		\item $xHx' \subset H$
+		\item $D$ és compatible amb l'operació de $G$
+		\item $E$ és compatible amb l'operació de $G$
+		\end{enumerate}
+	\end{itemize}
+\item Demostració
+	\begin{itemize}
+	\item $1 \to 2$
+		\begin{itemize}
+		\item $h, h_1 \in H$
+		\item $xhx' = (h_1x)x' = h_1 (xx') = h_1 \in H$
+		\end{itemize}
+	\item $2 \to 3$ Correcte
+	\item $3 \to 1$
+		\begin{itemize}
+		\item $xHx' \subset H \Rightarrow xH \subset Hx$
+		\item $x'Hx \subset H \Rightarrow Hx \subset xH$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Exemples}
 \end{document}
+%\section{Subgrups normals. Grup quocient}
+%\subsection*{Definicions}
+%\subsection*{Demostracions}
+%\subsection*{Exemples}
 
 dubtes
 	- (2.5) H subgrup (Z, +), H = mZ algún m
