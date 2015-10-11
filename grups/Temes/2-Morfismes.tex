@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%% Morfisme de grups %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Morfismes de grups}
+\subsection*{Definicions}
+\begin{itemize}
+\item Morfisme de grups $f$
+	\begin{itemize}
+	\item $G, G'$ grups
+	\item $f:G\to G'$ aplicació
+		\subitem $\forall x, y \in G\quad f(xy) = f(x)f(y)$
+	\end{itemize}
+\item nucli
+	\begin{itemize}
+	\item $\ker{f} = \{x \in G | f(x) = e'\}$ subgrup $G$
+	\end{itemize}
+\item imatge
+	\begin{itemize}
+	\item $\Ima{f} = \{f(x)| x \in G\}$ subgrup $G'$
+	\end{itemize}
+\item Monomorfisme de grups -injectiu
+\item Epimorfisme de gurps -exhaustiu
+\item Isomorfisme de grups -bijectiu $\simeq$
+\item Endomorfisme de grups -$G \to G$
+\item Automorfisme de $G$ -endomorfisme bijectiu
+
+\item $\ker{(\det)} = \SL(n, K)$ grup especial lineal
+\item $\ker{(\varepsilon)} = A_n$ grup alternat
+\item $\ker{(\pi)} = m\Z$ $\quad \pi:\Z \to \Z/m\Z$
+\end{itemize}
+
+\subsection*{Demostració}
+\begin{itemize}
+\item Proposició
+	\begin{itemize}
+	\item $G, G'$ són grups
+	\item $e \in G$ $e' \in G'$ elements neutres
+		\begin{enumerate}
+		\item $f(e) = e'$
+		\item $f(x^{-1}) = f(x)^{-1}$
+		\end{enumerate}
+	\end{itemize}
+\item demostració
+	\begin{enumerate}
+	\item $f(e) = f(ee) = f(e)f(e) \Rightarrow f(e) = e'$
+	\item $f(x^{-1})f(x) = f(x^{-1}x) = f(e) = e'$
+	\end{enumerate}
+\item Prop
+	\begin{itemize}
+	\item $G, G', G''$ són grups
+	\item $f: G \to G'$ morfisme de grups
+	\item $g: G' \to G''$ morfisme de grups
+		\begin{itemize}
+		\item $\Rightarrow g \circ f: G \to G''$ és morfisme de grups
+		\end{itemize}
+	\end{itemize}
+\item $f$ és isomorfisme, $f^{-1}$ també
+	\begin{itemize}
+	\item $x, y \in G'$
+	\item $f(f'(xy)) = f(f'(x)f'(x)) = ff'(x)ff'(y) = xy$
+	\end{itemize}
+\item $f$ injectiu $\Leftrightarrow \ker{f} = \{e\}$
+	\begin{itemize}
+	\item[$\Rightarrow$] $x\! \in G, x \in \ker(f)\! \Rightarrow f(x) = e' =\! f(e) \Rightarrow x = e$
+	\item[$\Leftarrow$] $x, y \in G, f(x) = f(y) \Rightarrow f(x)f(y)' = e' \Rightarrow xy' \in \ker{f} = \{e\} \Rightarrow x = y$
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Exemples}
+\begin{itemize}
+\item Morfismes de grups
+	\begin{itemize}
+	\item $det: GL(n, \R) \to \R^*$
+	\item $\varepsilon: S_n \to \{\pm 1\}$
+	\item $\pi: (\Z, +) \to (\Z/m\Z, +), a \mapsto [a]$
+	\end{itemize}
+\item Automorfisme
+	\begin{itemize}
+	\item $f_x:G\to G'$
+	\item $y \mapsto xyx'$
+		\begin{itemize}
+		\item $f_x(yz) = xyzx' = (xyx')(xzx')$
+		\item $(xyx')(xzx') = f_x(y)f_x(z)$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}

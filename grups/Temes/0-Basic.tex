@@ -1,0 +1,124 @@
+\section{Bàsic}
+\subsection*{Definicions}
+\begin{itemize}
+\item Grup
+	\begin{itemize}
+	\item Conjunt $G \neq \emptyset$
+	\item Operació interna binària $\forall x, y, z \in G$
+		\begin{enumerate}
+		\item[assosiativa] $(xy)z = x(yz) $
+		\item[el. neutre] $\exists e \in G: ex = xe = x$
+		\item[simètric] $\forall x \in G, \exists x' \in G: xx' = x'x = e$
+		\end{enumerate}
+	\item grup $G$ commutatiu i/o abelià
+		\begin{itemize}
+		\item $\forall x, y \in G\quad xy = yx$
+		\end{itemize}
+	\end{itemize}
+\item Subgrup
+	\begin{itemize}
+	\item $\emptyset \neq H \subset G$ grup
+		\begin{enumerate}
+		\item $\forall x, y \in H \Rightarrow xy \in H$
+		\item $H$ és grup amb l'operació de $G$
+		\end{enumerate}
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Demostracions}
+\begin{itemize}
+\item Únic element d'un grup
+	\begin{itemize}
+	\item element neutre $e = ee' = e'$
+	\item simètric $x' = x'e = x'(xx'') = (x'x)x'' = x''$
+	\end{itemize}
+\item Llei de simplificació - pels grups
+	\begin{itemize}
+	\item $\forall a, x, y \in G$ grup
+		\begin{itemize}
+		\item $ax = ay \Rightarrow x = y$
+		\item $xa = ya \Rightarrow x = y$
+		\end{itemize}
+	\end{itemize}
+\item Invers del producte
+	\subitem $(xy)' = y'x'$
+\item Propietats iguals -subgrups
+	\begin{enumerate}
+	\item $H$ és subgrup de $G$
+	\item $H$ compleix
+		\begin{enumerate}
+		\item $e \in H$
+		\item $\forall x \in H \Rightarrow x' \in H$
+		\item $\forall x, y \in H \Rightarrow xy \in H$
+		\end{enumerate}
+	\item $\forall x, y \in H \Rightarrow xy' \in H$
+	\end{enumerate}
+\item demostració
+	\begin{itemize}
+	\item $1. \to 2.$ és evident per definició de grup
+	\item $2. \to 3.$
+		\begin{itemize}
+		\item $\forall y \in H \Rightarrow y' \in H$
+		\item $\forall x \in H, y' \in H \Rightarrow xy' \in H$
+		\end{itemize}
+	\item $3. \to 1.$
+		\begin{itemize}
+		\item $H \neq \emptyset$ ja que $x \in H$
+		\item $\exists x \in H \Rightarrow$ $x, x \in H$ $\Rightarrow xx' = e \in H$
+		\item $\forall y \in H \Rightarrow$ $e, y \in H$ $\Rightarrow ey' = y' \in H$
+		\item $x, y' \in H \Rightarrow$ $x(y')' = xy \in H$
+		\end{itemize}
+	\end{itemize}
+\item Propietats intersecció
+	\begin{itemize}
+	\item $H_1, H_2$ subgrups de $G$ grup
+		\subitem $H_1 \cap H_2$ és subgrup de $G$
+	\end{itemize}
+\item Demostració
+	\begin{itemize}
+	\item $e_1 \in H_1, e_2 \in H_2, e \in G$
+		\subitem $e_1 = e_2 = e$
+	\item $\forall x \in H_1 \cap H_2 \Rightarrow x' \in H_1 \cap H_2$
+	\item $\forall x, y \in H_1 \cap H_2 \overset{?}{\Rightarrow} xy \in H_1 \cap H_2$
+		\begin{enumerate}
+		\item $\forall x \in H_1, H_2$
+		\item $\forall y \in H_1$
+			\begin{itemize}
+			\item $y \in H_2$
+				\subitem $x, y \in H_1 \cap H_2 \Rightarrow xy \in H_1 \cap H_2$
+			\item $y \notin H_2$
+				\subitem $y \notin H_1 \cap H_2$
+			\end{itemize}
+		\end{enumerate}
+	\end{itemize}
+\item $H$ subgrup $(\Z, +)$, $H \equiv m\Z$ algún $m$
+	\begin{itemize}
+	\item $H = \{0\} \Rightarrow H = 0 \Z$
+	\item $H \neq \{0\}$
+		\begin{itemize}
+		\item $m > 0$ més petit: $m \in H$
+		\item $a \in H$
+		\item $a = qm + r$ amb $0 \le r < m$
+			\begin{itemize}
+			\item $r = a - qm \in H \Rightarrow r = 0$
+			\item $a = qm \in m\Z \Rightarrow H \subset m\Z$
+			\end{itemize}
+		\item $n \in H \Rightarrow -n \in H$
+			\begin{itemize}
+			\item Conté elements positius
+			\item $0 < m \in H$ més petit $\Rightarrow m\Z \subset H$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Exemples}
+\begin{itemize}
+\item Grups abelians
+	\subitem $(\Z, +), (\C, +), (\Q\setminus\{0\}, \times), (\Z/m\Z, +), ((\Z/m\Z)^*, \times)$
+\item Grup no abelià
+	\subitem $\forall K$ cos, $GL(n, K)$ i $n \ge 2$
+\item Subgrup
+	\subitem $m\Z$ és subgrup de $(\Z, +) \forall m \in \Z$
+\end{itemize}

@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%% Ordre %%%%%%%%%%%%%%%%%%%%%%5
+\section{Ordre, relacions d'equivalència}
+\subsection*{Definició}
+\begin{itemize}
+\item Ordre $|G|$
+	\begin{itemize}
+	\item $G$ grup finit
+	\item És el nombre d'elements del conjunt
+	\end{itemize}
+\item Relació $D$ i $E$
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+		\begin{itemize}
+		\item $xDy \Leftrightarrow x'y \in H$
+		\item $yEx \Leftrightarrow yx' \in H$
+		\end{itemize}
+	\end{itemize}
+\item Classes d'equivalència per $D$
+	\begin{itemize}
+	\item $[x] = \{y \in G | xDy\}$
+	\item $xDy \Leftrightarrow x'y \in H \Leftrightarrow y = xh$ per a algún $h \in H$
+	\item $xH = \{xh | h \in H\}$ ``$D$''
+	\item $Hx = \{hx | h \in H\}$ ``$E$''
+	\item $G/D$ conjunt quocient de $G$ per la relació $D$
+	\item $G/E$ conjunt quocient de $G$ per la relació $E$
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Desmostracions}
+\begin{itemize}
+\item Les relacions $D$ i $E$ són d'equivalència
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+	\end{itemize}
+	\begin{enumerate}
+	\item $\forall x \in G\quad xDx \Rightarrow x'x = e \in H$ Reflexiva
+	\item $x, y \in G\quad xDy \Rightarrow x'y \in H \Rightarrow y'x = (x'y)' \in H \Rightarrow yDx$ Simètrica
+	\item $x, y, z \in G,
+		\begin{rcases}
+		xDy\\
+		yDz
+		\end{rcases}
+		\Rightarrow
+		\begin{rcases}
+		x'y \in H\\
+		y'z \in H
+		\end{rcases}
+		\Rightarrow
+		x'z = (x'y)(y'z) \in H \Rightarrow xDz
+		$ Transitiva
+	\end{enumerate}
+\item $G/E$ és bijectiu
+	\begin{itemize}
+	\item $
+		\begin{array}{cc}
+		H & \to xH \\
+		h & \mapsto xh
+		\end{array}
+		$
+	\item $
+		\begin{array}{cc}
+		H & \to Hx \\
+		h & \mapsto hx
+		\end{array}
+		$
+	\item $y \in xH \Leftrightarrow y = xh, h \in H \Leftrightarrow y' = hx' \Leftrightarrow y' \in Hx'$
+		\subitem $y \mapsto y'$
+	\item Tenim bijecció de $G/D$ i $G/E$
+	\end{itemize}
+\item Teorema de Lagrange
+	\begin{itemize}
+	\item $G$ grup finit
+	\item $H$ subgrup de $G$
+		\begin{itemize}
+		\item $|G| = |H|\dot [G:H]$
+		\end{itemize}
+	\end{itemize}
+\item Demostració like
+	\begin{itemize}
+	\item pagina 14 del pdf
+%	\item Les classes d'equivalència per $D$ formen una partició de $G$, és a dir $G$ és reunió disjunta de les classes d'equivalència i a cada classe d'equivalència i a cada classe d'equivalè
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Exemples}
+\begin{itemize}
+\item Ordre
+	\begin{itemize}
+	\item $|S_n| = n!$
+	\item $|\Z/m\Z| = m$
+	\end{itemize}
+\item Relació d'equivalència
+	\begin{itemize}
+	\item $G = S_3 = \{\Id, t_3, t_2, t_1, c_1, c_2\}$
+	\item $H = \{\Id, t_1\}$
+		\begin{itemize}
+		\item Classes per $D$
+			\begin{itemize}
+			\item $[\Id] = H$
+			\item $[t_2] = \{t_2, t_2t_1\} = \{t_2, c_2\}$
+			\item $[t_3] = \{t_3, t_3t_1\} = \{t_3, c_1\}$
+			\end{itemize}
+		\item Classes per $E$
+			\begin{itemize}
+			\item $[\Id] = H$
+			\item $[t_2] = \{t_2, t_1t_2\} = \{t_2, c_1\}$
+			\item $[t_3] = \{t_3, t_1t_3\} = \{t_3, c_2\}$
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+\item Índex de $G$ en $H$ el cardinal de $G/D$
+	\begin{itemize}
+	\item $[\Z:m\Z] = m$
+	\item $[S_3: \{\Id, t_1\}] = 3$
+	\end{itemize}
+\end{itemize}

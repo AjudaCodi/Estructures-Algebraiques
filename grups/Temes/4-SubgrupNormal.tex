@@ -1,0 +1,76 @@
+\section{Subgrups normals. Grup quocient}
+\subsection*{Definicions}
+\begin{itemize}
+\item $T$ compatible amb l'operació de $G$
+	\begin{itemize}
+	\item $G$ grup
+	\item $T$ relació d'equivalència de $G$
+		\begin{itemize}
+		\item $x, y, x', y' \in G$
+		\item 	$
+			\begin{rcases}
+			xTx'\\yTy'
+			\end{rcases}
+			\Rightarrow xyTx'y'
+			$
+		\end{itemize}
+	\end{itemize}
+\item Subgrup normal $H \triangleleft G$
+	\begin{itemize}
+	\item anomenat grup quocient de $G$ per $H$.
+	\item $G/H = G/E = G/D$
+	\end{itemize}
+\item Morfisme de pas al quocient
+	\begin{itemize}
+	\item $\pi:G \to G/H$
+	\item $x \mapsto [x]$
+	\end{itemize}
+\end{itemize}
+
+\subsection*{Demostracions}
+\begin{itemize}
+\item Proposició
+	\begin{itemize}
+	\item[Si] $T$ és relació d'equivalència compatible amb l'operació de $G$
+	\item[$\Rightarrow$] $G/T$ és grup amb l'operació definida per
+		\subitem $[x][y] = [xy]$
+	\end{itemize}
+\item Demostració
+	\begin{itemize}
+	\item L'operació esta ben definida
+		\begin{itemize}
+		\item Associativa
+		\item Element neutre $[e]$
+		\item Simètric $[x']$
+		\end{itemize}
+	\end{itemize}
+\item Proposició
+	\begin{itemize}
+	\item $G$ grup
+	\item $H$ subgrup de $G$
+	\item $D, E$ relacions definides a partir $H$
+	\item $\forall x \in G$
+		\begin{enumerate}
+		\item $xH = Hx$
+		\item $xHx' = H$
+		\item $xHx' \subset H$
+		\item $D$ és compatible amb l'operació de $G$
+		\item $E$ és compatible amb l'operació de $G$
+		\end{enumerate}
+	\end{itemize}
+\item Demostració
+	\begin{itemize}
+	\item $1 \to 2$
+		\begin{itemize}
+		\item $h, h_1 \in H$
+		\item $xhx' = (h_1x)x' = h_1 (xx') = h_1 \in H$
+		\end{itemize}
+	\item $2 \to 3$ Correcte
+	\item $3 \to 1$
+		\begin{itemize}
+		\item $xHx' \subset H \Rightarrow xH \subset Hx$
+		\item $x'Hx \subset H \Rightarrow Hx \subset xH$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+\subsection*{Exemples}

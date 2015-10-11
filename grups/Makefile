@@ -1,2 +1,4 @@
-basic:
-	latex loli.tex; latex loli.tex; dvipdf loli.dvi;
+all:
+	cd b; make d
+5:
+	cd b; make 5
