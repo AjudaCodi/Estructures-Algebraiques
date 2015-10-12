@@ -1,6 +1,9 @@
 # us del vim
 *.swp
 
+# Brosa generada
+b
+
 # us del LaTeX
 *.aux
 *.dvi

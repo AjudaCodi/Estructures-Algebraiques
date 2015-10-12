@@ -12,14 +12,50 @@
 		\item $(h_1, h_2) \mapsto h_1h_2$
 		\end{itemize}
 	\end{itemize}
+\item $G$ és producte directe intern dels subgups $H_1, H_2$
+	\begin{enumerate}
+	\item $G = H_1H_2$
+	\item $\forall h_1 \in H_1, \forall h_2 \in H_2 \quad h_1h_2 = h_2h_1$
+	\item $H_1 \cap H_2 = \{e\}$
+	\end{enumerate}
+	\subitem $H_1, H_2 \lhd G$
+	\subitem $H_1\times\{e\}, \{e\}\times H_2 \lhd H_1\times H_2$
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%% DEM %%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Demostracions}
 \begin{itemize}
 \item $H_1, H_2$ subgrups de $G$
 	\begin{itemize}
 	\item $f: H_1 \times H_2 \to G$
 	\item $(h_1, h_2) \mapsto h_1h_2$
-	\item $\Im$
+	\item és equivalent dir:
 	\end{itemize}
+	\begin{enumerate}
+	\item $\Ima f = H_1 H_2$
+	\item $f$ morfisme $\Leftrightarrow
+		\begin{cases}
+		\forall h_1 \in H_1\\
+		\forall h_2 \in H_2
+		\end{cases}
+		$ commuten
+		\begin{itemize}
+		\item $(h_1, h_2),(h'_1, h'_2) \in H_1 \times H_2$
+		\item $(h_1, h_2)\cdot(h'_1, h'_2) = (h_1h'_1, h_2h'_2)$
+		\item
+			$
+			\begin{cases}
+			f\big((h_1, h_2)(h'_1, h'_2)\big) = h_1h'_1h_2h'_2\\
+			f(h_1, h_2)f(h'_1, h'_2) = (h_1h_2)(h'_1h'_2)
+			\end{cases} \Leftrightarrow
+			$
+			\subitem $h'_1h_2 = h_2h'_1$
+		\end{itemize}
+	\item Si $f$ és morfisme de grups
+		\begin{itemize}
+		\item $\ker f = \{(h, h^{-1}): h \in H_1 \cap H_2\}$
+		\item $f$ injectiva $\Leftrightarrow H_1 \cap H_2 = \{e\}$
+		\end{itemize}
+	\end{enumerate}
 \end{itemize}
 \subsection*{Exemples}

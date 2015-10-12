@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tres}[11-10-2015 Custom Package]
+
+% Important llibreries
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[catalan]{babel}
+
+% perque quedi mes clar
+\RequirePackage{color}
+
+% faig anar equation*
+\RequirePackage{mathtools}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+
+% declarant funcions
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Id}{Id}
+
+% commandes
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% like kindle
+\usepackage{microtype}     % microtypography, reduces hyphenation
+
+\usepackage[papersize={3.6in,4.8in},hmargin=0.1in,vmargin={0.1in,0.1in}]{geometry}  % page geometry
+
+\usepackage{fancyhdr}   % headers and footers
+\pagestyle{fancy}
+\fancyhead{}            % clear page header
+\fancyfoot{}            % clear page footer
+
+\setlength{\abovecaptionskip}{2pt} % space above captions 
+\setlength{\belowcaptionskip}{0pt} % space below captions
+\setlength{\textfloatsep}{2pt}     % space between last top float or first bottom float and the text
+\setlength{\floatsep}{2pt}         % space left between floats
+\setlength{\intextsep}{2pt}        % space left on top and bottom of an in-text float
