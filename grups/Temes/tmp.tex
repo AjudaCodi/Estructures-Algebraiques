@@ -1,0 +1,42 @@
+\section{Grup resoluble}
+\subsection*{Definicions}
+\begin{itemize}
+\item totes les definicions
+\end{itemize}
+
+\subsection*{Demostracions}
+\begin{itemize}
+\item Equivalents
+	\begin{enumerate}
+	\item Tot subgrup d'un resoluble és resoluble
+	\item Tot quocient d'un grup resoluble per un subgrup normal és resoluble
+	\item Si $G$ és grup, $H$ subgrup normal i $H$ i $G/H$ són resolubles, aleshores $G$ és resoluble
+	\end{enumerate}
+\item Demostració
+	\begin{enumerate}
+	\item $G$ és resoluble $\Leftrightarrow$ $\{e\} = G_0 \subset G_1, \dots, G_n \subset G$
+		\begin{itemize}
+		\item Torre abeliana
+		\item
+			$
+			\begin{cases}
+			G_i \triangleleft G_{i+1} & i = 0, 1, \dots, n -1\\
+			G_{i+1}/G_1 &\text{abelià}
+			\end{cases}
+			$
+		\item Sigui $H$ subgrup de $G$.
+		\item $H_i:= G_i \cap H$
+		\item Volem veure que és torre abeliana
+		\item $H_{i+1} \xhookrightarrow{i} G_{i+1} \xrightarrow{\pi} G_{i+1}/G_i$
+		\item $H_{i+1} \xrightarrow{\varphi} G_{i+1}/G_i$
+		\item $\ker \varphi = H_{i+1} \cap G_i = (G_{i+1} \cap H) \cap G_i = H \cap G_i = H_i \Rightarrow H_i \triangleleft H_{i+1}$
+		\item Teorema d'isomorfia
+			\subitem $H_{i+1}/\ker \varphi \simeq \Ima \varphi \Rightarrow H_{i+1}/H_i$ Subgrup de $G_{i+1}/G_i$ ``abelià''
+		\end{itemize}
+	\end{enumerate}
+\end{itemize}
+
+\subsection*{Exemples}
+\begin{itemize}
+\item doncs un exemple
+\end{itemize}

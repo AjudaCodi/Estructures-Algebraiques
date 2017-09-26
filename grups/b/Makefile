@@ -10,11 +10,7 @@ clear:
 	rm lol* -f
 d: clear all
 
-5:
-	rm 5* -f
-	latex ../motor/5.tex
-	dvipdf 5.dvi
-6:
-	rm 6* -f
-	latex ../motor/b/6.tex
-	dvipdf 6.dvi
+a:
+	rm a* -f
+	latex ../motor/a.tex
+	dvipdf a.dvi
